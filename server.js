@@ -1,18 +1,13 @@
 const express = require('express')
-const articleRouter = require('./routes/articles')
+const mainRouter = require('./routes/main')
 const app = express()
 
 app.set('view engine', 'ejs')
 
-app.use('/articles', articleRouter)
+app.use('/main', mainRouter)
 
 app.get('/', (req, res) => {
-    const articles = [{
-        title: 'Test Article',
-        createdAt: Date.now(),
-        description: 'Test description'
-    }]
-    res.render('index', { articles: articles })
+    res.render('index', { text: 'Hello' })
 })
 
 app.listen(3000)
