@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sign Up Form</title>
+  <link rel="stylesheet" href="/css/signup.css">
+  <script src="/js/signup.js"></script>
+</head>
+
+<body onload="createDateOptions()">
+  <div class="center">
+    <div class="container">
+      <form action="#">
+        <h1>Sign Up</h1>
+        <p>It's quick and easy.</p><br>
+        <div>
+          <input type="text" placeholder="Username" required>
+        </div><br>
+        <div class="name">
+          <input type="text" placeholder="First name" required>
+          &ensp;
+          <input type="text" placeholder="Last name" required>
+        </div>
+        <div class="email"><br>
+          <data class="data">
+            <input type="text" placeholder="Email" required>
+          </data>
+        </div><br>
+        <data class="data">
+          <input type="password" placeholder="New password" required>
+        </data>
+        <div class="birthday"><br>
+          <p>Birthday</p>
+          <select name="month" required>
+            <option value="Jan">Jan</option>
+            <option value="Jan">Feb</option>
+            <option value="Jan">Apr</option>
+            <option value="Jan">May</option>
+            <option value="Jan">Jun</option>
+            <option value="Jan">Jul</option>
+            <option value="Jan">Aug</option>
+            <option value="Jan">Sep</option>
+            <option value="Jan">Oct</option>
+            <option value="Jan">Nov</option>
+            <option value="Jan">Dec</option>
+          </select>&ensp;
+          <select id="day" required>
+          </select>&ensp;
+          <select id="year" required>
+          </select>
+        </div><br><br>
+        <div class="job">
+          <span>Education</span>
+          <a>Employment</span><a><br>
+              <select name="education" required>
+                <option value="No Formal Education">No Formal Education</option>
+                <option value="Primary Education">Primary Education</option>
+                <option value="Secondary Education">Secondary Education</option>
+                <option value="Vocational Qualification">Vocational Qualification</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate or Higher">Doctorate or Higher</option>
+              </select>
+              &ensp;
+              <select name="employment" required>
+                <option value="Student">Student</option>
+                <option value="Employed">Employed</option>
+                <option value="Self Employed">Self Employed</option>
+                <option value="Unemployed">Unemployed</option>
+              </select>
+        </div><br>
+        <div class="industry">
+          <input type="text" placeholder="Industry" required><br>
+        </div>
+        <div class="file">
+          <p>Resume</p>
+          <input type="file" required>
+        </div>
+        <div class="btn">
+          <div class="inner"></div>
+          <a href="#" class="info-btn">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

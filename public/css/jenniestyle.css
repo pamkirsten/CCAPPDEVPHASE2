@@ -1,0 +1,307 @@
+ 
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .sections{
+    
+    float: none;
+    margin-left:150px;
+  
+    
+    
+  }
+
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  .side{
+   
+    width:450px;
+   
+
+  
+  }
+
+  .sidenav {
+    
+    width:250px;
+    padding-top: 20px;
+    height: 200%;
+    background: url("../images/haldtrans.png") no-repeat;
+    border-radius: 25px;
+    
+    
+
+  }
+  .info{
+    margin-top: 30px;
+    text-align:left;
+  }
+
+  .posts{
+    background: url("../images/nobg.png") no-repeat;
+    margin-left:10px;
+    border-radius: 25px;
+    height: auto7;
+    
+  }
+
+  header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  label{
+    display: none;
+  }
+  
+  header .logo{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+  }
+  
+  .profile
+  {
+      background: url("../images/bgtrans.png") no-repeat;
+      padding: 20px;
+      -webkit-box-shadow: 0px 3px 22px 3px rgba(0,0,0,0.3); 
+      box-shadow: 0 0 12px 2px rgba(179, 179, 179, 0.5);
+      border-radius: 25px;
+    
+  }
+
+  header .navigation a{
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+  }
+  
+  header .navigation a:not(:last-child){
+    margin-right: 30px;
+  }
+  
+  header .navigation a:hover{
+    background: #F25C60;
+  }
+  
+  img {
+    border-radius: 50%;
+    
+  }
+  
+  body{
+    background: url("../images/plainbg.png") no-repeat;
+    
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+
+
+  }
+
+  
+
+  .card {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 12px 2px rgba(179, 179, 179, 0.5);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  
+  .card .picture {
+    background-image: url('../images/podcasts.jpeg');
+    background-position: 50%;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card .content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  
+  .card .header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .card .profile-pic {
+    background-image: url("../images/jennie.jpeg");
+    background-position: 50%;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .card .detail {
+    margin-left: 10px;
+  }
+  
+  .card .posted {
+    font-size: 10px;
+    padding-top: 3px;
+  }
+  
+  .card .desc {
+    padding: 5px;
+    text-align: left;
+    margin-top:5px;
+    line-height: 1.5;
+  }
+
+  .card .submitdesc {
+    padding-top: 10px;
+    line-height: 1.5;
+    background-color: gray;
+    margin:20px;
+    border-radius: 25px;
+  }
+
+
+
+  .card .desc{
+
+  }
+  .card .tags {
+    font-size: 12px;
+    color: #FFDF3B;
+    padding-top: 10px;
+  }
+  
+  .card .footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  .card .submitfooter {
+    text-align:right;
+    margin-right:15px;
+  }
+  
+  
+  .card .footer .like {
+  
+    flex: 0 0 25%;
+  }
+
+
+  
+  .card .footer .comment {
+    flex: 1;
+  }
+  
+  .card .footer .share {
+    flex: 0 0 18%;
+  }
+  
+  .card .footer i {
+    padding-right: 3px;
+  }
+  
+
+  .postcard {
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 12px 2px rgba(179, 179, 179, 0.5);
+    margin-bottom: 20px;
+    border-radius: 25px;
+    font-size: 14px;
+  }
+  
+  
+  .postcard .content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 22px;
+  }
+  
+  .postcard .header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .postcard .profile-pic {
+    background-image: url("../images/jennie.jpeg");
+    background-position: 50%;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .postcard .detail {
+    margin-left: 10px;
+  }
+  
+  .postcard .desc {
+
+    line-height: 1.5;
+  }
+
+
+  .postcard .submitfooter {
+    text-align:right;
+    margin-right:15px;
+  }
+
+ 
+
+  .button {
+    background-color: rgb(175, 194, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:25px;
+  }
+
+  .profile .profilecont{
+    padding-right:15px;
+
+  }
