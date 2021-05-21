@@ -32,19 +32,4 @@ socketIO.on("connection", function (socket) {
 	socketID = socket.id;
 });
 
-http.listen(3000, function () {
-    console.log("Server started.");
-
-    mongoClient.connect("mongodb://localhost:27017", function (error, client){
-        var database = client.db("my_social_network");
-		console.log("Database connected.");
-
-        app.get("/", function (request, result) {
-            result.render("landingpage");
-        });
-
-        app.get("/signup", function (request, result) {
-            result.render("signup");
-        });
-    });
-});
+http.listen(3000);

@@ -8,51 +8,35 @@
   <script src="/js/signup.js"></script>
 </head>
 
-<body onload="createDateOptions()">
+<body>
   <div class="center">
     <div class="container">
-      <form action="#">
+      <form onsubmit="return doRegister(this);">
         <h1>Sign Up</h1>
         <p>It's quick and easy.</p><br>
         <div>
-          <input type="text" placeholder="Username" required>
+          <input type="text" name="username" placeholder="Username" required>
         </div><br>
         <div class="name">
-          <input type="text" placeholder="First name" required>
+          <input type="text" name="fname" placeholder="First name" required>
           &ensp;
-          <input type="text" placeholder="Last name" required>
+          <input type="text" name="lname" placeholder="Last name" required>
+        </div><br>
+        <div class="location">
+            <input type="text" name="location" placeholder="Location" required><br>
         </div>
         <div class="email"><br>
           <data class="data">
-            <input type="text" placeholder="Email" required>
+            <input type="text" name="email" placeholder="Email" required>
           </data>
         </div><br>
         <data class="data">
-          <input type="password" placeholder="New password" required>
+          <input type="password" name="password" placeholder="New password" required>
         </data>
-        <div class="birthday"><br>
-          <p>Birthday</p>
-          <select name="month" required>
-            <option value="Jan">Jan</option>
-            <option value="Jan">Feb</option>
-            <option value="Jan">Apr</option>
-            <option value="Jan">May</option>
-            <option value="Jan">Jun</option>
-            <option value="Jan">Jul</option>
-            <option value="Jan">Aug</option>
-            <option value="Jan">Sep</option>
-            <option value="Jan">Oct</option>
-            <option value="Jan">Nov</option>
-            <option value="Jan">Dec</option>
-          </select>&ensp;
-          <select id="day" required>
-          </select>&ensp;
-          <select id="year" required>
-          </select>
-        </div><br><br>
+        <br><br>
         <div class="job">
-          <span>Education</span>
-          <a>Employment</span><a><br>
+          <a class="educ">Education<a>
+          <a>Employment<a><br>
               <select name="education" required>
                 <option value="No Formal Education">No Formal Education</option>
                 <option value="Primary Education">Primary Education</option>
@@ -71,19 +55,54 @@
               </select>
         </div><br>
         <div class="industry">
-          <input type="text" placeholder="Industry" required><br>
+          <input type="text" name="industry" placeholder="Industry" required><br>
+        </div>
+        <div class="industry">
+            <input type="text" name="position" placeholder="Position" required><br>
+        </div>
+        <div class="industry">
+            <input type="text" name="prevposition" placeholder="Previous Position" required><br>
         </div>
         <div class="file">
-          <p>Resume</p>
-          <input type="file" required>
+          <p>Resume (PDF)</p>
+          <input type="file" name="file" accept=".pdf" required>
         </div>
+        <div class="file">
+            <p>Profile Picture</p>
+            <input type="file" name="profileImage" accept="image/*" required>
+          </div>
         <div class="btn">
           <div class="inner"></div>
-          <a href="#" class="info-btn">Sign Up</a>
+          <button class="info-btn" name="submit" type="submit">
+              <span>Sign Up</span>
+          </button>
         </div>
       </form>
     </div>
   </div>
+  <script>
+    function doRegister(form) {
+        form.submit.setAttribute("disabled", "disabled");
+
+        var ajax = new XMLHttpRequest();
+        ajax.open("POST", "/signup", true);
+
+        ajax.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200){
+              form.submit.removeAttribute("disabled");
+
+              var response = JSON.parse(this.responseText)
+              alert(response.message);
+
+              if (response.status == "success"){
+                  window.location.href = "/login"
+              }
+            }
+        }
+        ajax.send(new FormData(form));
+        return false;
+    }
+</script>
 </body>
 
 </html>
